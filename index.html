@@ -3,157 +3,458 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Shizen — G4C Game 2025</title>
+    <title>Shizen — The Fight For Your Home | G4C Game 2025</title>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;900&family=Playfair+Display:ital,wght@0,400;0,600;1,400;1,600&display=swap" rel="stylesheet">
-    <script src="https://unpkg.com/feather-icons"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/feather-icons@4.28.0/dist/feather.min.js"></script>
     <style>
-      * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-        font-family: 'Montserrat', sans-serif;
+      body * {
+        font-family: "Montserrat", sans-serif;
       }
-
+      
       html, body {
-        height: 100%;
+        padding: 0;
+        margin: 0;
         scroll-behavior: smooth;
-        color: #fff;
+        background-color: #f8f8f8;
       }
-
-      body {
-        background: url('6f22c77d-dd27-4113-93af-e3187f945a2a.png') no-repeat center center/cover;
-        position: relative;
+      
+      h1, h2, h3, h4 {
+        font-weight: bold;
       }
-
+      
+      ul li {
+        border: none !important;
+      }
+      
+      /* Background Image */
       body::before {
-        content: '';
-        position: absolute;
+        content: "";
+        background-image: url('https://i.imgur.com/placeholder.jpg'); /* Replace with actual leaf pattern URL */
+        background-size: cover;
+        position: fixed;
         top: 0;
         left: 0;
-        height: 100%;
         width: 100%;
-        background-color: rgba(0, 0, 0, 0.65);
+        height: 100%;
+        opacity: 0.15;
         z-index: -1;
       }
-
-      header {
-        padding: 2rem;
+      
+      /* Containers */
+      .image-section {
+        height: 100vh;
         text-align: center;
-        font-family: 'Playfair Display', serif;
+        background-color: #1a3a1a;
+        padding: 20px;
+        box-shadow: 0 0 15px rgba(0,0,0,0.2);
       }
-
-      header h1 {
-        font-size: 4rem;
-        font-weight: 600;
-        color: #A3E635;
+      
+      .image-section img {
+        max-width: 60%;
+        max-height: 60%;
+        margin-top: 50px !important;
+        object-fit: cover;
+        border-radius: 5px;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.3);
       }
-
-      header p {
-        font-size: 1.2rem;
-        font-style: italic;
-        margin-top: 0.5rem;
+      
+      .links {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        margin-top: 30px;
       }
-
-      section {
-        padding: 2rem;
-        max-width: 1000px;
-        margin: auto;
+      
+      .links a {
+        flex: 0 0 10%;
+        transition: transform 0.3s ease;
       }
-
-      section h2 {
-        font-family: 'Playfair Display', serif;
-        font-size: 2rem;
-        border-bottom: 2px solid #A3E635;
-        padding-bottom: 0.5rem;
-        margin-bottom: 1rem;
+      
+      .links a:hover {
+        transform: scale(1.1);
       }
-
-      section p {
-        font-size: 1.1rem;
-        line-height: 1.8;
-        margin-bottom: 2rem;
-      }
-
-      iframe {
-        display: block;
-        margin: 2rem auto;
-        border: none;
-        width: 392px;
-        height: 620px;
-        border-radius: 12px;
-        box-shadow: 0 0 20px rgba(0,0,0,0.5);
-      }
-
-      .social {
-        text-align: center;
-        margin-top: 3rem;
-      }
-
-      .social a {
-        margin: 0 1rem;
-        color: #A3E635;
-        font-size: 2rem;
+      
+      .icon-link {
         text-decoration: none;
+        font-size: 48px auto;
+        padding: 26px;
       }
-
-      .footer {
+      
+      .content-container {
+        width: 70%;
+        margin: 0 auto;
+        background-color: rgba(255, 255, 255, 0.9);
+        padding: 30px;
+        border-radius: 10px;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+      }
+      
+      .home {
+        width: 100%;
+        margin: 0 auto;
         text-align: center;
-        font-size: 0.9rem;
-        margin-top: 3rem;
-        padding: 1rem;
-        color: #ccc;
       }
-
-      @media screen and (max-width: 768px) {
-        header h1 {
-          font-size: 2.5rem;
-        }
-
-        iframe {
+      
+      .home p {
+        font-weight: 500;
+        color: #2c5e2c;
+      }
+      
+      .home h1 {
+        font-family: 'Cinzel', serif;
+        font-size: 64px;
+        color: #1a3a1a;
+        margin-bottom: 20px;
+        text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+      }
+      
+      .home h2 {
+        color: #446644;
+        margin-bottom: 15px;
+      }
+      
+      .home h3 {
+        color: #558855;
+        font-style: italic;
+      }
+      
+      .section-title {
+        font-family: 'Cinzel', serif;
+        letter-spacing: 1px;
+        color: #1a3a1a;
+      }
+      
+      .section-content {
+        line-height: 1.8;
+        text-align: justify;
+        color: #333;
+      }
+      
+      /* Navigation */
+      .nav-link {
+        font-weight: 600 !important;
+        letter-spacing: 1px;
+        transition: all 0.3s ease;
+      }
+      
+      .nav-link:hover {
+        background-color: rgba(26, 58, 26, 0.1) !important;
+      }
+      
+      /* Game iframe container */
+      .game-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 50px 0;
+        position: relative;
+      }
+      
+      .game-container::before {
+        content: "";
+        position: absolute;
+        width: 420px;
+        height: 650px;
+        background-color: #1a3a1a;
+        border-radius: 15px;
+        z-index: -1;
+        box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+      }
+      
+      .game-container iframe {
+        border-radius: 10px;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        margin: 10px;
+      }
+      
+      /* Dividers and accents */
+      .accent-divider {
+        height: 3px;
+        background: linear-gradient(90deg, transparent, #4c7e4c, transparent);
+        margin: 40px auto;
+        width: 50%;
+      }
+      
+      .section-quote {
+        font-style: italic;
+        font-size: 1.3em;
+        color: #1a3a1a;
+        text-align: center;
+        margin: 30px 0;
+        padding: 15px;
+        border-left: 5px solid #4c7e4c;
+        background-color: rgba(76, 126, 76, 0.1);
+        border-radius: 0 10px 10px 0;
+      }
+      
+      /* Utilities */
+      .w3-margin-top-2 {
+        margin-top: 32px;
+      }
+      
+      .w3-margin-top-4 {
+        margin-top: 64px;
+      }
+      
+      .w3-margin-top-20-percent {
+        margin-top: 10%;
+      }
+      
+      .w3-sticky {
+        position: -webkit-sticky;
+        position: sticky;
+        top: 0;
+        z-index: 10;
+      }
+      
+      .w3-fixed {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+      }
+      
+      .highlight-text {
+        color: #2c5e2c;
+        font-weight: 600;
+      }
+      
+      /* Angel statue icon/decoration */
+      .nature-icon {
+        max-width: 80px;
+        opacity: 0.8;
+        margin: 0 auto;
+        display: block;
+      }
+      
+      /* Media queries */
+      @media screen and (max-width: 1200px) {
+        .home {
           width: 90%;
+        }
+        .content-container {
+          width: 80% !important;
+        }
+        .download-text {
+          display: none;
+        }
+      }
+      
+      @media screen and (max-width: 992px) {
+        .home {
+          width: 100%;
+        }
+        .home h1 {
+          font-size: 48px;
+        }
+        .game-container::before {
+          width: 400px;
+        }
+      }
+      
+      @media screen and (max-width: 600px) {
+        .content-container {
+          width: 95% !important;
+          padding: 15px;
+        }
+        
+        .image-section {
+          padding: 10px;
+        }
+        
+        .links a {
+          flex: 0 0 5% !important;
+        }
+        
+        .home {
+          text-align: center;
+          width: 100%;
+        }
+        
+        .home p {
+          font-size: medium !important;
+        }
+        
+        .home h1 {
+          font-size: 32px;
+        }
+        
+        .home h2 {
+          font-size: 24px;
+        }
+        
+        .w3-fixed {
+          position: inherit;
+        }
+        
+        .image-section {
           height: auto;
+        }
+        
+        .image-section img {
+          max-width: 80%;
+          max-height: 80%;
+        }
+        
+        .icon-link {
+          font-size: 24px;
+        }
+        
+        .w3-container, .w3-panel {
+          padding: 0.01em;
+        }
+        
+        .download-text {
+          display: inline-block;
+        }
+        
+        .game-container::before {
+          width: 350px;
         }
       }
     </style>
   </head>
-  <body>
-    <header>
-      <h1>Shizen</h1>
-      <p>"Nature calls—you’re the only one listening."</p>
-      <p style="font-weight: 300; margin-top: 0.5rem;">By Nabila Raisa — Game Developer in the Making</p>
-    </header>
-
+  <body>   
     <section>
-      <iframe src="https://studio.code.org/projects/applab/YFL2WV67UBIiTR56W46NFETWcFALZ19DxXDgd-ufsA4/embed"></iframe>
+      <!-- MOBILE NAVIGATION -->
+      <div class="w3-container w3-padding-16 w3-border-bottom w3-hide-medium w3-hide-large" style="background-color: rgba(255,255,255,0.9);">
+        <a href="#home" class="w3-bar-item w3-button w3-hover-none" style="color: #1a3a1a; font-weight: bold;">Shizen</a>
+        <a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium" onclick="toggleNavigation()" style="color: #1a3a1a;">&#9776;</a>
+      </div>
+      <div id="mobile-nav" class="w3-bar-block w3-hide w3-hide-large w3-hide-medium w3-sticky" style="background-color: rgba(255,255,255,0.95); box-shadow: 0 2px 5px rgba(0,0,0,0.1);">
+        <a href="#pitch" class="w3-bar-item w3-button w3-center nav-link w3-hover-none w3-border-white w3-bottombar w3-hover-border-green w3-hover-text-green" onclick="toggleNavigation()">PITCH</a>
+        <a href="#theme" class="w3-bar-item w3-button w3-center nav-link w3-hover-none w3-border-white w3-bottombar w3-hover-border-green w3-hover-text-green" onclick="toggleNavigation()">THEME</a>
+        <a href="#why" class="w3-bar-item w3-button w3-center nav-link w3-hover-none w3-border-white w3-bottombar w3-hover-border-green w3-hover-text-green" onclick="toggleNavigation()">WHY</a>
+      </div>
 
-      <h2>PITCH</h2>
-      <p>
-        The ancient tree, over 1,500 years old, has sustained your people for generations—but ruthless loggers now threaten to destroy it. Guided by the spirit of the tree, Shizen, you must rally villagers, complete quests, sabotage deforestation efforts, and protect your home. This isn’t just a fight for survival—it’s a fight for the soul of your village and the forest it depends on.
-      </p>
+      <!-- SOCIAL SECTION -->
+      <section class="image-section w3-quarter w3-fixed w3-padding-small">
+        <!--IMAGE/AVATAR-->
+        <img src="profilepic.jpg" class="w3-circle w3-border w3-border-sand" style="border-width: 3px !important;"/>
+        <!--SOCIAL NETWORK BUTTONS-->
+        <div class="links w3-margin-top w3-padding-small">
+          <a class="icon-link w3-text-sand w3-hover-text-amber" href="#linkedin" target="_blank">
+             <i data-feather="linkedin"></i>
+          </a>
+          <a class="icon-link w3-text-sand w3-hover-text-amber" href="#github" target="_blank">
+             <i data-feather="github"></i>
+          </a>
+        </div>
+      </section>
 
-      <h2>THEME</h2>
-      <p>
-        Shizen explores the theme of environmental preservation through storytelling, dialogue, and interactive gameplay. Players uncover the bond between people and nature while collecting evidence, nurturing plants, and confronting destruction. Every action taken reflects the urgency of environmental stewardship and empowers players to become nature’s guardians.
-      </p>
+      <!-- CONTENT SECTION-->
+      <section class="w3-threequarter w3-padding-large w3-right">
+        <!--DESKTOP NAVIGATION-->
+        <div class="w3-container w3-padding-large w3-border-bottom w3-hide-small" style="background-color: rgba(255,255,255,0.9); box-shadow: 0 2px 5px rgba(0,0,0,0.1);">
+          <a href="#home" class="w3-bar-item w3-button nav-link w3-hover-none w3-border-white w3-bottombar w3-hover-border-green" style="color: #1a3a1a;">SHIZEN</a>
+          <a href="#why" class="w3-bar-item w3-button nav-link w3-hover-none w3-border-white w3-bottombar w3-hover-border-green w3-hover-text-green w3-right w3-hide-small" style="border-width: 2px !important;" onclick="toggleNavigation()">WHY</a>
+          <a href="#theme" class="w3-bar-item w3-button nav-link w3-hover-none w3-border-white w3-bottombar w3-hover-border-green w3-hover-text-green w3-right w3-hide-small" style="border-width: 2px !important;" onclick="toggleNavigation()">THEME</a>
+          <a href="#pitch" class="w3-bar-item w3-button nav-link w3-hover-none w3-border-white w3-bottombar w3-hover-border-green w3-hover-text-green w3-right w3-hide-small" style="border-width: 2px !important;" onclick="toggleNavigation()">PITCH</a>
+        </div>
+        
+        <div class="content-container w3-margin-top-2">
+          <!--HOME SECTION-->
+          <div id="home" class="home w3-container w3-margin-top-4 w3-cursive">
+            <p style="font-style: italic; font-size:x-large; font-family: 'Cinzel', serif;">"Nature calls—you're the only one listening."</p>
+            <div class="accent-divider" style="width: 30%; margin: 20px auto;"></div>
+            <h1>Shizen: The Fight For Your Home</h1>
+            <h2>Nabila Raisa</h2>
+            <h3>High School Junior & Game Developer in the Making</h3>
+            
+            <img src="angel-statue.jpg" alt="Nature icon" class="nature-icon w3-margin-top-2">
+            
+            <div class="game-container">
+              <iframe width="392" height="620" src="https://studio.code.org/projects/applab/YFL2WV67UBIiTR56W46NFETWcFALZ19DxXDgd-ufsA4/embed"></iframe>
+            </div>
+          </div>
+          
+          <!--PITCH SECTION-->
+          <div id="pitch" class="w3-container w3-margin-top-20-percent w3-cursive w3-large">
+            <h2 class="section-title w3-border-bottom w3-border-amber" style="border-width: 3px !important;">THE PITCH</h2>
+            
+            <div class="section-quote">
+              "When the last tree is cut, the last fish is caught, and the last river is polluted... you will realize you cannot eat money."
+            </div>
+            
+            <p class="section-content w3-margin-top-2"> 
+              The <span class="highlight-text">ancient tree Shizen</span>, dating more than fifteen hundred years old, has sustained your people for generations. But now, ruthless loggers and lumberjacks threaten to destroy it—and with it, the place you call home.
+            </p>
+            
+            <p class="section-content">
+              Guided by The Great Tree's wisdom, you must rally the villagers, complete adventurous quests, and stand against those who would sacrifice your heritage for profit. Gather evidence of environmental destruction, heal the wounded land, and strategically sabotage the invaders' plans to protect what matters most.
+            </p>
+            
+            <p class="section-content">
+              With immersive storytelling and meaningful choices, <span class="highlight-text">Shizen: A Fight for Your Home</span> challenges you to become the hero your community desperately needs. The fate of the forest—and consequently your village—rests in your hands!
+            </p>
+          </div>
+          
+          <div class="accent-divider"></div>
+           
+          <!--THEME SECTION-->
+          <div id="theme" class="w3-container w3-margin-top-20-percent w3-cursive w3-large">
+            <h2 class="section-title w3-border-bottom w3-border-amber" style="border-width: 3px !important;">THE THEME</h2>
+            
+            <p class="section-content w3-margin-top-2"> 
+              In <span class="highlight-text">Shizen: The Fight for Your Home</span>, the theme of environmental preservation comes alive through the story of a once-thriving forest village now threatened by corporate greed. Through meaningful gameplay and rich storytelling, players discover the essential bond between nature and humanity—a connection we all must nurture.
+            </p>
+    
+            <p class="section-content">
+              As you progress through the game, you'll gather evidence of environmental harm, tend to wounded plants, strategically disrupt the loggers' operations when necessary, and unite your community in defense of the ancient tree. Each action reinforces the central message: what nourishes the earth nourishes us all.
+            </p>
+            
+            <p class="section-content">
+              Your choices throughout the game shape the forest's future, making the theme of environmental stewardship both personal and powerful. Will you find the courage to stand against those who see only profit where you see life?
+            </p>
+          </div>
+          
+          <div class="accent-divider"></div>
 
-      <h2>MY WHY</h2>
-      <p>
-        I made Shizen because I care deeply about the world around me. Nature isn’t just pretty—it’s powerful, sacred, and often taken for granted. I wanted to remind people, especially young players, that standing up for our planet is both necessary and impactful. One voice can spark change. One player can inspire a movement.
-      </p>
+          <!--WHY SECTION-->
+          <div id="why" class="w3-container w3-margin-top-20-percent w3-cursive w3-large">
+            <h2 class="section-title w3-border-bottom w3-border-amber" style="border-width: 3px !important;">MY WHY</h2>
+            
+            <div class="section-quote">
+              "In nature, nothing exists alone." — Rachel Carson
+            </div>
+            
+            <p class="section-content w3-margin-top-2"> 
+              I created <span class="highlight-text"><i>Shizen</i></span> because of my deep connection with the natural world. Throughout my life, I've witnessed our environment being taken for granted, with few people seeming to care about how our planet might one day reach a point of no return from human mistreatment.
+            </p>
+            
+            <p class="section-content"> 
+              Forests are more than just scenery—they're homes, lifelines, and living beings deserving protection. I wanted to craft a story that reminds players, especially younger ones, that nature has value beyond economic resources. That standing up for our environment—even when it feels like a solitary battle—is a powerful act of courage.
+            </p>
+            
+            <p class="section-content"> 
+              Through this game, I hope to demonstrate how even one person, no matter how young or inexperienced, can change the hearts and minds of their community and inspire better environmental stewardship. <span class="highlight-text">Shizen</span> isn't just about confronting loggers; it's about reconnecting with the land, believing in your voice, and remembering that every choice we make matters.
+            </p>
+            
+            <p class="section-content"> 
+              I want players to feel they're part of something meaningful—something worth protecting. Because in the end, when we fight for nature, we're fighting for our home.
+            </p>
+          </div>
+        </div>
+      </section>
     </section>
-
-    <div class="social">
-      <a href="#" target="_blank" aria-label="LinkedIn"><i data-feather="linkedin"></i></a>
-    </div>
-
-    <div class="footer">
-      &copy; 2025 Nabila Raisa | Shizen: G4C Game Jam
-    </div>
-
+       
     <script>
-      feather.replace();
+      // Function to toggle mobile navigation
+      function toggleNavigation() {
+        let nav = document.getElementById("mobile-nav");
+        if (nav.classList.contains('w3-show')) {
+          nav.classList.remove('w3-show');
+        } else { 
+          nav.classList.add('w3-show');
+        }
+      }
+    </script>
+    <script>
+      // Script to load feather icons
+      feather.replace()
     </script>
   </body>
 </html>
