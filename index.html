@@ -48,9 +48,35 @@
       .image-section {
         height: 100vh;
         text-align: center;
-        background-color: #1a3a1a;
         padding: 20px;
         box-shadow: 0 0 15px rgba(0,0,0,0.2);
+        position: relative;
+      }
+      
+      /* Leaf pattern background for sidebar */
+      .image-section::before {
+        content: "";
+        background-image: url('leaf-pattern.jpg'); /* Leaf pattern from image 2 */
+        background-size: cover;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        opacity: 0.85;
+        z-index: -1;
+      }
+      
+      /* Dark green overlay to make text readable */
+      .image-section::after {
+        content: "";
+        background-color: rgba(26, 58, 26, 0.75);
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
       }
       
       .image-section img {
@@ -60,6 +86,8 @@
         object-fit: cover;
         border-radius: 5px;
         box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+        position: relative;
+        z-index: 1;
       }
       
       .links {
@@ -67,6 +95,8 @@
         justify-content: center;
         flex-wrap: wrap;
         margin-top: 30px;
+        position: relative;
+        z-index: 1;
       }
       
       .links a {
@@ -376,7 +406,7 @@
             <h2 class="section-title w3-border-bottom w3-border-amber" style="border-width: 3px !important;">THE PITCH</h2>
             
             <div class="section-quote">
-              "When the last tree has fallen, the last fish is caught, and the last river is poisoned... you will realize you cannot eat money."
+              "When the last tree is cut, the last fish is caught, and the last river is polluted... you will realize you cannot eat money."
             </div>
             
             <p class="section-content w3-margin-top-2"> 
